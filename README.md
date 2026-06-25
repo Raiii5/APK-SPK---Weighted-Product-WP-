@@ -1,34 +1,21 @@
-# Sistem Pendukung Keputusan Manajer IT Terbaik dengan metode SAW (Simple Additive Weighting) menggunakan PHP dan MySQL
-Metode Simple Additive Weighting (SAW) sering juga dikenal istilah metode penjumlahan terbobot. Konsep dasar metode SAW adalah mencari penjumlahan terbobot dari rating kinerja pada setiap alternatif pada semua atribut (Fishburn 1967). SAW dapat dianggap sebagai cara yang paling mudah dan intuitif untuk menangani masalah Multiple Criteria Decision-Making MCDM, karena fungsi linear additive dapat mewakili preferensi pembuat keputusan (Decision-Making, DM). Hal tersebut dapat dibenarkan, namun, hanya ketika asumsi preference independence (Keeney & Raiffa 1976) atau preference separability (Gorman 1968) terpenuhi.
+# Sistem Pendukung Keputusan (SPK) - Metode Weighted Product (WP)
 
-Langkah Penyelesaian Simple Additive Weighting (SAW) adalah sebagai berikut :
+Aplikasi web Sistem Pendukung Keputusan (SPK) ini dikembangkan menggunakan metode **Weighted Product (WP)**. Dibangun menggunakan PHP dan MySQL, sistem ini dirancang untuk memproses dan meranking alternatif keputusan secara akurat.
 
-1. Menentukan kriteria-kriteria yang akan dijadikan acuan dalam pengambilan keputusan, yaitu Ci
-2. Menentukan rating kecocokan setiap alternatif pada setiap kriteria (X).
-3. Membuat matriks keputusan berdasarkan kriteria(Ci), kemudian melakukan normalisasi matriks berdasarkan persamaan yang disesuaikan dengan jenis atribut (atribut keuntungan ataupun atribut biaya) sehingga diperoleh matriks ternormalisasi R.
-4. Hasil akhir diperoleh dari proses perankingan yaitu penjumlahan dari perkalian matriks ternormalisasi R dengan vektor bobot sehingga diperoleh nilai terbesar yang dipilih sebagai alternatif terbaik (Ai)sebagai solusi
+## 📌 Deskripsi Metode
+Metode *Weighted Product* (WP) adalah salah satu metode penyelesaian masalah *Multi-Criteria Decision Making* (MCDM). Metode ini mengevaluasi beberapa alternatif terhadap sekumpulan kriteria yang telah ditentukan. Berbeda dengan metode SAW yang mengandalkan penjumlahan linier, metode WP menggunakan **proses perpangkatan** untuk menghubungkan atribut *rating*, sehingga lebih presisi dalam menyeimbangkan perbandingan antar kriteria.
 
-**Cara Instalasi**
-Download terlebih dahulu dengan
-`https://github.com/rickyginting/spksaw.git`
-Import database di folder db/db_saw.sql
+## 🚀 Langkah Penyelesaian WP dalam Sistem
+1. **Penentuan Kriteria & Bobot:** Menetapkan kriteria dan bobot prioritas.
+2. **Normalisasi Bobot:** Membagi nilai bobot setiap kriteria dengan total keseluruhan bobot agar total bobot menjadi 1 (Wj).
+3. **Perhitungan Vektor S:** Mengalikan rating setiap alternatif yang telah dipangkatkan dengan bobot kriteria.
+4. **Perhitungan Vektor V:** Membagi nilai Vektor S alternatif dengan total nilai Vektor S dari seluruh alternatif untuk mendapatkan hasil akhir (Perankingan).
 
-![Screenshot (35)](https://user-images.githubusercontent.com/46182403/120494446-0775ff00-c3e6-11eb-9ecd-7bc4a15e7761.png)
-![Screenshot (29)](https://user-images.githubusercontent.com/46182403/120494657-31c7bc80-c3e6-11eb-842c-87275d476b5f.png)
-![Screenshot (30)](https://user-images.githubusercontent.com/46182403/120494619-2c6a7200-c3e6-11eb-8437-cac8339db4f1.png)
-![Screenshot (31)](https://user-images.githubusercontent.com/46182403/120494630-2e343580-c3e6-11eb-9d32-bd42b839f135.png)
-![Screenshot (32)](https://user-images.githubusercontent.com/46182403/120494636-2ecccc00-c3e6-11eb-9729-02a055d21025.png)
-![Screenshot (33)](https://user-images.githubusercontent.com/46182403/120494641-2ffdf900-c3e6-11eb-8a4b-3fd0c2ee5797.png)
-![Screenshot (34)](https://user-images.githubusercontent.com/46182403/120494649-30968f80-c3e6-11eb-93b0-079aa51bc6f1.png)
+## 🛠️ Teknologi yang Digunakan
+- **Backend:** PHP (Native)
+- **Database:** MySQL
+- **Frontend:** HTML, CSS (Bootstrap), JavaScript
 
-Jangan lupa follow Instagram saya di [@rickyginting_](https://instagram.com/rickyginting_)
-
-Saya sangat senang jika kamu memberikan dukungan dana melalui
-
-**Bank Mandiri - 1070015342878**
-
-
-
-
-
-
+## 👨‍💻 Pengembang
+- **Nama:** Anrai Harika Harpan
+- **Instansi:** Universitas Pamulang
